@@ -1,0 +1,199 @@
+﻿<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>销售订单</title>
+		<link rel="stylesheet" href="../js/layui/css/layui.css">
+	</head>
+	<style>
+		*{
+			font-size: 13px;
+		}
+		.line1{
+			display: flex;
+			flex-direction: row;
+			margin-bottom: 3px;
+		}
+		input{
+			height: 15px;
+			width: 174px;
+		}
+		label{
+			display: block;
+			width: 90px;
+		}
+		.line1 div{
+			display: flex;
+			flex-direction: row;
+			width: 300px;
+		}
+		
+		
+	</style>
+	<body>
+		<form  action="">
+ 			<div class="line1">
+ 				<div>
+ 					<label style="color: blue;">客户</label>
+ 					<input type="text" />
+ 				</div>
+ 				<div>
+ 					<label style="color: blue;">单据日期</label>
+ 					<input type="date" style="width: 173px;"/>
+ 				</div>
+ 			</div>
+ 			<div class="line1">
+ 				<div >
+ 					<label>送货地址</label>
+ 					<input type="text" style="width: 60px;margin-right: 2px;"/><input type="text" style="width: 108px;"/>
+ 				</div>
+ 				<div>
+ 					<label style="color: blue;">单据号码</label>
+ 					<input type="text" />
+ 				</div>
+ 			</div>
+ 			<div class="line1">
+ 				<div>
+ 					<label>销售订单类型</label>
+ 					<input type="text" />
+ 				</div>
+ 				<div>
+ 					<label>客户订单</label>
+ 					<input type="text" />
+ 				</div>
+ 			</div>
+ 			<div class="line1">
+ 				<div>
+ 					<label>单价是否含税</label>
+ 					<select style="width: 178px;">
+ 						<option>未税</option>
+ 						<option>含税</option>
+ 					</select>
+ 				</div>
+ 				<div>
+ 					<label style="color: blue;">币别</label>
+ 					<input type="text" />
+ 				</div>
+ 			</div>
+ 			<div class="line1">
+ 				<div>
+ 					<label>单况</label>
+ 					<select style="width: 178px;">
+ 						<option>未结案</option>
+ 						<option>已结案</option>
+ 						<option>无效</option>
+ 					</select>
+ 				</div>
+ 				<div>
+ 					<label>汇率</label>
+ 					<input type="text" />
+ 				</div>
+ 			</div>
+			<div class="layui-tab layui-tab-brief" lay-filter="docDemoTabBrief" style="width: 566px;">
+				<ul class="layui-tab-title">
+				   	<li class="layui-this">内容</li>
+				    <li>账款</li>
+				    <li>备注</li>
+				</ul>
+				<div class="layui-tab-content">
+				    <div class="layui-tab-item layui-show" style="overflow-x: auto; overflow-y: auto; height: 200px; width:566px;">
+				    	<table class="layui-table" style="white-space: nowrap;">
+						  <colgroup>
+						    <col width="150">
+						    <col width="200">
+						    <col>
+						  </colgroup>
+						  <thead>
+						    <tr>
+						      <th>栏号</th>
+						      <th style="color: blue;">物料编号</th>
+						      <th>(物料名称)</th>
+						      <th>(规格型号)</th>
+						      <th>(单位名称)</th>
+						      <th>折扣前单价</th>
+						      <th>折数(%)</th>
+						      <th>单价</th>
+						      <th>金额</th>
+						      <th>税率(%)</th>
+						      <th>(税额)</th>
+						      <th>(含税金额)</th>
+						      <th style="color: blue;">预出库日</th>
+						      <th>(未出数量)</th>
+						      <th>赠品</th>
+						      <th>分录备注</th>
+						      <th>(物料组合)</th>
+						      <th>(来源单别)</th>
+						      <th>(来源单号)</th>
+						      <th>生产</th>
+						      <th>(排程单号)</th>
+						      <th>(已生产数量)</th>
+						    </tr> 
+						  </thead>
+						  <tbody>
+						    <tr>
+						    </tr>
+						  </tbody>
+						</table>
+      
+				    </div>
+				    <div class="layui-tab-item">内容2</div>
+				    <div class="layui-tab-item">内容3</div>
+				</div>
+			</div>  
+			<div>
+				<div class="line1">
+	 				<div>
+	 					<label style="color: blue;">业务人员</label>
+	 					<input type="text" />
+	 				</div>
+	 				<div>
+	 					<label>制单人员</label>
+	 					<input type="text"/>
+	 				</div>
+	 			</div>
+	 			<div class="line1">
+	 				<div>
+	 					<label style="color: blue;">所属部门</label>
+	 					<input type="text" />
+	 				</div>
+	 				<div>
+	 					<label>复核人员</label>
+	 					<input type="text"/>
+	 				</div>
+	 			</div>
+	 			<div class="line1">
+	 				<div>
+	 					<label>所属项目</label>
+	 					<input type="text" />
+	 				</div>
+	 			</div>
+			</div>
+			<div style="margin-top: 20px;">
+				<select name="" lay-verify="">
+				  <option value="">查询</option>
+				  <option value="">历史交易查询</option>
+				  <option value="">转单记录查询</option>
+				  <option value="">利润预估查询</option>
+				</select> 
+				<select name="" lay-verify="">
+				  <option value="">转单</option>
+				  <option value="">转销售出库单</option>
+				  <option value="">销售报价转入</option>
+				</select> 
+				<select name="" lay-verify="">
+				  <option value="">功能</option>
+				  <option value="">批次变更单价</option>
+				  <option value="">物料组合设定</option>
+				  <option value="">单况状态切换</option>
+				</select>   
+			</div>
+		</form>
+	</body>
+	<script type="text/javascript" src="../js/layui/layui.js" ></script>
+	<script>
+		//注意：选项卡 依赖 element 模块，否则无法进行功能性操作//aaaaaaaaa
+		layui.use('element', function(){
+		  var element = layui.element;
+		});
+	</script>
+</html>

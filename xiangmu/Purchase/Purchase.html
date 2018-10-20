@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>请购</title>
+		<script src="../js/jquery-1.12.4.js"></script>
+		<link rel="stylesheet" href="../js/layui/css/layui.css" />
+		<link rel="stylesheet" href="../css/bootstrap.min.css" />
+		<script src="../js/bootstrap.min.js"></script>
+		<script src="../js/layui/layui.js"></script>
+	</head>
+
+	<body style="background-color: #66AFE9;">
+
+		<table border="0" style="margin: auto;">
+			<tr>
+				<td style="color: blue;">采购请购类型：</td>
+				<td><input type="text" style="width:200px;" /></td>
+				<td style="color: blue;">单据日期：</td>
+				<td><input type="date" style="width:200px;margin-bottom: 3px;" /></td>
+			</tr>
+			<tr>
+				<td>单况：</td>
+				<td>
+					<select name="" style="width:200px;">
+						<option value=""></option>
+					</select>
+				</td>
+				<td style="color: blue;">单据号码：</td>
+				<td><input type="text" style="width:200px;margin-bottom: 3px;" /></td>
+			</tr>
+
+		</table>
+		<div style="margin: auto;color:#000000;border: 0px solid red;width: 620px; height: 43px;">
+
+			<ul id="myTab" class="nav nav-tabs">
+				<li class="active">
+					<a href="#a1" data-toggle="tab">内容</a>
+				</li>
+				<li>
+					<a href="#a2" data-toggle="tab">备注</a>
+				</li>
+			</ul>
+		</div>
+		<div style=" background-color: #FFFFFF;margin: auto;border: 0px solid red;width: 620px; height: 300px; overflow-x: scroll;overflow-y: scroll;">
+
+			<div id="myTabContent" class="tab-content">
+				<!--
+    	内容
+    -->
+				<div class="tab-pane fade in active" id="a1">
+					<table border="1" style="width: 1500px;">
+						<thead>
+							<tr style="text-align: center;">
+								<td colspan="6"></td>
+								<td colspan="3">标准进价信息</td>
+								<td colspan="3">最后一次采购信息</td>
+								<td colspan="6"></td>
+							</tr>
+							<tr>
+								<td>(栏号)</td>
+								<td style="color: blue;">物料编号</td>
+								<td>(物料名称)</td>
+								<td>(规格型号)</td>
+								<td>(单位名称)</td>
+								<td>(数量)</td>
+								<td>(币别)</td>
+								<td>(标准进价)</td>
+								<td>(标准进价金额)</td>
+								<td>(币别)</td>
+								<td>(单价)</td>
+								<td>(进价金额)</td>
+								<td style="color: blue;">需求日期</td>
+								<td>(建议采购日期)</td>
+								<td>(未采购量)</td>
+								<td>分录备注</td>
+								<td>(来源单别)</td>
+								<td>(来源单号)</td>
+							</tr>
+						</thead>
+						<tbody>
+							<tr></tr>
+						</tbody>
+						<tfoot>
+							<tr></tr>
+						</tfoot>
+					</table>
+				</div>
+				<!--
+    	备注
+    -->
+				<div class="tab-pane fade" id="a2">
+					<table border="0" style="margin: auto;">
+						<tr>
+							<td>表头条纹：</td>
+							<td><input type="text" style="width:200px;" /></td>
+							<td>自定栏一：</td>
+							<td>
+								<select name="" style="width:200px;">
+									<option value=""></option>
+								</select>
+							</td>
+							</td>
+						</tr>
+						<tr>
+							<td>表尾条纹：</td>
+							<td><input type="text" style="width:200px;" /></td>
+							<td>自定栏二：</td>
+							<td>
+								<select name="" style="width:200px;">
+									<option value=""></option>
+								</select>
+							</td>
+						</tr>
+						<tr>
+							<td>备注</td>
+							<td>
+								<textarea name="" style="width:200px; height: 100px;"></textarea>
+							</td>
+						</tr>
+
+					</table>
+				</div>
+			</div>
+		</div>
+
+		<table border="0" style="margin: auto;">
+			<tr>
+				<td style="color: blue;">请购人员：</td>
+				<td><input type="text" style="width:200px;" /></td>
+				<td>制单人员：</td>
+				<td><input type="text" style="width:200px;margin-bottom: 3px;" /></td>
+			</tr>
+			<tr>
+				<td style="color: blue;">请购部门：</td>
+				<td><input type="text" style="width:200px;" /></td>
+				<td>复核人员：</td>
+				<td><input type="text" style="width:200px;" /></td>
+			</tr>
+		</table>
+
+		<!--按钮-->
+		<div style="margin: auto; width: 580px;padding-top: 10px;">
+			<select style="width: 100px;" class="btn btn-info">
+				<option value="">转单</option>
+			</select>
+			<select style="width: 100px;" class="btn btn-info">
+				<option value="">功能</option>
+			</select>
+		</div>
+		<script>
+			$(function() {
+				$('#myTab li:eq(0) a').tab('show');
+			});
+		</script>
+	</body>
+
+</html>

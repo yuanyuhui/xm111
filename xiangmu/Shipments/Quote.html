@@ -1,0 +1,90 @@
+﻿<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>调拨</title>
+		<link rel="stylesheet" href="../../layui/css/layui.css" />
+		<style>
+			input {
+				width: 200px;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div class="layui-container">  
+		<div class="layui-row ">
+           <div class="layui-container">
+			<span class="layui-col-md-offset1">调出仓库 <input type="text"></span><span class="layui-col-md-offset1">单据日期<input type="text" ><br /></span>
+			<span class="layui-col-md-offset1">调入仓库<input type="text" ></span><span class="layui-col-md-offset1">单据号码<input type="text" ><br /></span>
+			</div>
+     
+		</div>
+		<div class="layui-tab layui-tab-card">
+			<ul class="layui-tab-title">
+				<li class="layui-this">内容</li>
+				<li>备注</li>
+
+			</ul>
+			<div class="layui-tab-content" style="height: 800px;">
+				<div class="layui-tab-item layui-show">
+					<table class="layui-table">
+						<colgroup>
+							<col width="150">
+							<col width="200">
+							<col>
+						</colgroup>
+						<thead>
+							<tr>
+								<th>(栏号)</th>
+								<th>物流编号</th>
+								<th>(物流名称)</th>
+								<th>(规格型号)</th>
+								<th>(单位)</th>
+								<th>数量</th>
+								<th>(批号)</th>
+								<th>分录备注</th>
+							</tr>
+						</thead>
+						<tbody>
+						</tbody>
+					</table>
+   
+				</div>
+				<div class="layui-tab-item">
+                <span class="layui-col-md-offset1">自定义栏一
+      <select name="city" lay-verify="required" >
+        <option value="0"></option>
+      </select>
+      </span>
+      
+        <span class="layui-col-md-offset3">自定义栏二
+      <select name="city" lay-verify="required" >
+        <option value="0"></option>
+      </select>
+      </span><br />
+      备注<textarea name="" required lay-verify="required"  class="layui-textarea"></textarea>
+	</div>
+	
+
+			</div>
+		</div>
+		<span class="layui-col-md-offset1">制单人员 <input type="text" ></span><span class="layui-col-md-offset1">复核人员<input type="text" ><br /></span>
+	    <select name="city" lay-verify="required" >
+	    	<option value="">功能</option>
+        <option value="0">批号设定</option>
+         <option value="1">条码打印</option>
+      </select>
+     </div>
+	</body>
+	<script src="../../layui/layui.js"></script> 
+	<script>
+		layui.use('element', function(){
+  var element = layui.element;
+  
+  //…
+});
+	</script>
+   
+</html>

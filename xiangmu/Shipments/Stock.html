@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>库存成本调整（调价）</title>
+		<link rel="stylesheet" href="../js/layui/css/layui.css">
+	</head>
+	<style>
+		*{
+			font-size: 13px;
+		}
+		.line1{
+			display: flex;
+			flex-direction: row;
+			margin-bottom: 3px;
+		}
+		input{
+			height: 15px;
+			width: 174px;
+		}
+		label{
+			display: block;
+			width: 90px;
+		}
+		.line1 div{
+			display: flex;
+			flex-direction: row;
+			width: 300px;
+		}
+		
+		
+	</style>
+	<body>
+		<form>
+			<div class="line1">
+ 				<div>
+ 					<label style="color: blue;">单据日期</label>
+ 					<input type="date" style="width: 173px;"/>
+ 				</div>
+ 				<div>
+ 					<label style="color: blue;">单据号码</label>
+ 					<input type="text" />
+ 				</div>
+ 			</div>
+ 			<div class="line1">
+ 				<div>
+ 					<label>增值科目</label>
+ 					<input type="text" />
+ 				</div>
+ 				<div>
+ 					<label>凭证编号</label>
+ 					<input type="text" />
+ 				</div>
+ 			</div>
+ 			<div class="line1">
+ 				<div>
+ 					<label>减值科目</label>
+ 					<input type="text" />
+ 				</div>
+ 				<div>
+ 					<label>调整方式</label>
+ 					<input type="text" />
+ 				</div>
+ 			</div>
+ 			
+ 			<div class="layui-tab layui-tab-brief" lay-filter="docDemoTabBrief" style="width: 566px;">
+				<ul class="layui-tab-title">
+				   	<li class="layui-this">内容</li>
+				    <li>备注</li>
+				</ul>
+				<div class="layui-tab-content">
+				    <div class="layui-tab-item layui-show" style="overflow-x: auto; overflow-y: auto; height: 200px; width:566px;">
+				    	<table class="layui-table" style="white-space: nowrap;">
+						  <colgroup>
+						    <col width="150">
+						    <col width="200">
+						    <col>
+						  </colgroup>
+						  <thead>
+						    <tr>
+						      <th>栏号</th>
+						      <th style="color: blue;">物料编号</th>
+						      <th>(物料名称)</th>
+						      <th>(规格型号)</th>
+						      <th>(单位)</th>
+						      <th>(库存量)</th>
+						      <th>(平均成本)</th>
+						      <th>(单价)</th>
+						      <th>(调价金额)</th>
+						      <th>分录备注</th>
+						    </tr> 
+						  </thead>
+						  <tbody>
+						    <tr>
+						    </tr>
+						  </tbody>
+						</table>
+				    </div>
+				    <div class="layui-tab-item">内容2</div>
+				</div>
+			</div>  
+			
+			
+			<div>
+				<div class="line1">
+	 				<div>
+	 					<label>制单人员</label>
+	 					<input type="text" />
+	 				</div>
+	 				<div>
+	 					<label>复核人员</label>
+	 					<input type="text"/>
+	 				</div>
+	 			</div>
+			</div>
+		</form>
+	</body>
+</html>
